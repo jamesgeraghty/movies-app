@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import PageTemplate from '../components/templateMovieListPage';
-import { getMovies } from "../api/tmdb-api";
+import PageTemplate from '../components/UpComingMoviesPage'
 
-const HomePage = (props) => {
+const UpcomingMoviesPage = (props) => {
   const [movies, setMovies] = useState([]);
   const favorites = movies.filter(m => m.favorite)
   localStorage.setItem('favorites', JSON.stringify(favorites))
@@ -15,18 +14,25 @@ const HomePage = (props) => {
   };
 
   useEffect(() => {
-    getMovies().then(movies => {
-      setMovies(movies);
-    });
+    fetch(
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=…your-key…&language=en-US&page=1`
+    )
+      .then((res) => res.json())
+      .then((json) => {
+        return json.results;
+      })
+      .then((movies) => {
+        setMovies(movies);
+      });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <PageTemplate
-      title='Discover Movies'
+      title='Up Coming Movies'
       movies={movies}
       selectFavorite={addToFavorites}
     />
   );
 };
-export default HomePage;
+export default UpcomingMoviesPage;
