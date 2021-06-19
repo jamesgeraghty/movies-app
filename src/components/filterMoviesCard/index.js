@@ -64,6 +64,7 @@ export default function FilterMoviesCard(props) {
           label="Search field"
           type="search"
           variant="filled"
+          onChange={handleTextChange}
         />
         <FormControl className={classes.formControl}>
           <InputLabel id="genre-label">Genre</InputLabel>
