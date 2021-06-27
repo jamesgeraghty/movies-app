@@ -9,7 +9,7 @@ export const getMovies = async () => {
 };
   
 export const getMovie = async ( args ) => {
-  // console.log(args)
+   console.log(args)
   // eslint-disable-next-line no-unused-vars
   const [prefix, { id }] = args.queryKey;
   const response = await fetch(
@@ -20,6 +20,8 @@ export const getMovie = async ( args ) => {
   }
   return response.json();
 };
+
+
   
   export const getGenres = async () => {
     const response = await  fetch(
@@ -43,7 +45,7 @@ export const getMovie = async ( args ) => {
       throw new Error(response.json().message);
     }
     return response.json();
-  };  
+  }; 
 
   export const getMovieReviews = (id) => {
     return fetch(

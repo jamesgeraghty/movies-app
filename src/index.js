@@ -10,7 +10,10 @@ import SiteHeader from './components/siteHeader'
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from 'react-query/devtools';
 import MoviesContextProvider from "./contexts/moviesContext";
+import AddMovieReviewPage from './pages/addMovieReviewPage'
 
+
+// the below - will retain all data in the cache for 1 hour before it becomes invalidated
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -28,13 +31,14 @@ const App = () => {
         <SiteHeader />
         <MoviesContextProvider>
             {" "}
-            <Switch>
-        <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
-        <Route path="/reviews/:id" component={MovieReviewPage} />
-        <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
-        <Route path="/movies/:id" component={MoviePage} />
-        <Route exact path="/" component={HomePage} />      
-        <Redirect from="*" to="/" />
+        <Switch>
+            <Route exact path="/reviews/form" component={AddMovieReviewPage} />
+            <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
+            <Route path="/reviews/:id" component={MovieReviewPage} />
+            <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
+            <Route path="/movies/:id" component={MoviePage} />
+            <Route exact path="/" component={HomePage} />      
+            <Redirect from="*" to="/" />
         </Switch>
         </MoviesContextProvider>
       </BrowserRouter>
