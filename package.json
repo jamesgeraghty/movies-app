@@ -1,4 +1,5 @@
 {
+  "homepage": "http://jamesgeraghty.github.io/react-website",
   "name": "moviesApp",
   "version": "0.1.0",
   "private": true,
@@ -6,6 +7,7 @@
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
+    "gh-pages": "^3.2.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -15,6 +17,8 @@
     "react-scripts": "4.0.1"
   },
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy": "gh-pages -d build",
     "storybook": "start-storybook -p 6006 -s public",
     "start": "react-scripts start",
     "build": "react-scripts build",
