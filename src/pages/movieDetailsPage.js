@@ -1,5 +1,4 @@
 //To use our custom hook
-
 import { withRouter } from "react-router-dom";
 import MovieDetails from "../components/movieDetails";
 import PageTemplate from "../components/templateMoviePage";
