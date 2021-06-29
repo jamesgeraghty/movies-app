@@ -1,5 +1,5 @@
 {
-  "homepage": "http://jamesgeraghty.github.io/react-website",
+  "homepage": "https://jamesgeraghty.github.io/react-website/",
   "name": "moviesApp",
   "version": "0.1.0",
   "private": true,
@@ -17,7 +17,7 @@
     "react-scripts": "4.0.1"
   },
   "scripts": {
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "storybook": "start-storybook -p 6006 -s public",
     "start": "react-scripts start",
