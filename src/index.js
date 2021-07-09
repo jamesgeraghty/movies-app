@@ -38,8 +38,7 @@ const App = () => {
             <Route path="/reviews/:id" component={MovieReviewPage} />
             <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
             <Route exact path="/reviews/form" component={WriteReviewPage} />
-            <Route path="/movies/:id" component={MoviePage} />
-          
+            <Route path="/movies/:id" component={MoviePage} />          
             <Route exact path="/" component={HomePage} />      
             <Redirect from="*" to="/" />
         </Switch>

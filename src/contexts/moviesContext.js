@@ -24,7 +24,7 @@ const MoviesContextProvider = (props) => {
 
   const playListAdd = (movie) => {
     setPlayList( [...playLists, movie.id])
-    console.log(playLists)
+    console.log(playLists, movie.id)
      
   };
 
