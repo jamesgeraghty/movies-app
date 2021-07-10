@@ -21,6 +21,8 @@ The features of the React app will include:
   
 ## API Reference
 
+The data for the app will be retrieved from an open web API, The Movie Database
+
 #### Get all items
 
 ```http
