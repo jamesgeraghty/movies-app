@@ -29,12 +29,6 @@ The data for the app will be retrieved from an open web API, The Movie Database.
 REACT_APP_TMDB_KEY=.... your API key value ...
 FAST_REFRESH=falses
 ```
-
-
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
-
   
 ## Acknowledgements
 
