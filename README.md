@@ -21,27 +21,15 @@ The features of the React app will include:
   
 ## API Reference
 
-The data for the app will be retrieved from an open web API, The Movie Database
+The data for the app will be retrieved from an open web API, The Movie Database. In VS Code, in the project base folder a file called .env is created with the following content:
 
-#### Get all items
+#### API Keys
 
-```http
-  GET /api/items
+```
+REACT_APP_TMDB_KEY=.... your API key value ...
+FAST_REFRESH=falses
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-#### Get item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
 
 #### add(num1, num2)
 
