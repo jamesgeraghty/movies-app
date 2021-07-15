@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom";
 import HomePage from "./pages/homePage";
 import UpcomingMoviesPage from "./pages/upComing";
 import MoviePage from "./pages/movieDetailsPage";
-import FavoriteMoviesPage from "./pages/favoriteMoviesPage"; // NEW
+import FavoriteMoviesPage from "./pages/favoriteMoviesPage"; 
 import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader'
 import { QueryClientProvider, QueryClient } from "react-query";
@@ -34,8 +34,9 @@ const App = () => {
             {" "}
         <Switch>
             <Route exact path="/reviews/form" component={AddMovieReviewPage} />
-            <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
             <Route path="/reviews/:id" component={MovieReviewPage} />
+            <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
+           
             <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
             <Route exact path="/reviews/form" component={WriteReviewPage} />
             <Route path="/movies/:id" component={MoviePage} />          
