@@ -30,13 +30,11 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <SiteHeader />
-        <MoviesContextProvider>
-            {" "}
+        <MoviesContextProvider>          
         <Switch>
             <Route exact path="/reviews/form" component={AddMovieReviewPage} />
             <Route path="/reviews/:id" component={MovieReviewPage} />
-            <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
-           
+            <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />           
             <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
             <Route exact path="/reviews/form" component={WriteReviewPage} />
             <Route path="/movies/:id" component={MoviePage} />          
